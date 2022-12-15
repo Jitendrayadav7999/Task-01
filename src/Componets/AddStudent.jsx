@@ -8,7 +8,7 @@ const AddStudent = () => {
   async function addStudent(e){
     e.preventDefault()
     console.log(name, subject, marks);
-    let id =  localStorage.getItem("teacher") 
+    let id = JSON.parse(localStorage.getItem("teacher")) 
     console.log(id)
 
     let result = await fetch(`http://localhost:3001/student/${id}`,{

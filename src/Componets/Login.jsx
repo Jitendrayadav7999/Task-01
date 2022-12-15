@@ -10,7 +10,7 @@ const Login = () => {
 
   async function loginData(e){
     e.preventDefault()
-    console.log(email, password);
+    //console.log(email, password);
 
     let result = await fetch("http://localhost:3001/login" ,{
       method:"post",
@@ -26,7 +26,7 @@ const Login = () => {
     }else{
       localStorage.setItem("teacher", JSON.stringify(result.data.teacherId))
       localStorage.setItem("token", JSON.stringify(result.data.token))
-      console.log(result);
+      // console.log(result);
       navigate('/')
     }
 

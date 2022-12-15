@@ -31,7 +31,7 @@ const Students = () => {
   }
 
   const deleteStudent = async(studentId) =>{
-    let id = localStorage.getItem('teacher')
+    let id = JSON.parse(localStorage.getItem('teacher'))
     let result = await fetch(`http://localhost:3001/student/${id}`,{
       method:'delete',
       body:JSON.stringify({studentId}),
